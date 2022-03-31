@@ -1,0 +1,334 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    height: 100%;
+}
+/* SECTION 1 :BANNER */
+/* navigation + logo */
+#header {
+    position: relative;
+    height: 1000px;
+    background-image: url("../img/1.jpg");
+    background-size: cover;
+}
+#logo {
+    position: absolute;
+    left: 50px;
+    top: 20px;
+    font-weight: bold;
+}
+#logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+#nav ul{
+    display: flex;
+    justify-content: right;
+    border-left-width: 100px;
+    margin-left: 335px;
+    padding: 15px;
+}
+#nav ul li {
+    margin: 10px;
+    font-weight: 700;
+    font-size: 25px;
+    display: flex;
+}
+.item a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+.item a:hover {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+}
+/* main-header */
+#main-header {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) ;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+#main-header h1{
+    font-size: 50px;
+}
+#main-header p{
+    margin: 15px;
+}
+#button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#button a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    border: 3px solid white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+/* footer */
+#list {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%,-50%) ;
+    text-align: center;
+
+}
+/* SECTION 2 : WELCOME */
+#welcome {
+    padding: 20px 40px;
+    font-weight: 400;
+}
+
+#welcome h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+#welcome p {
+    width: 75%;
+    margin: 30px auto;
+    text-align: center;
+    color: grey;
+
+}
+
+#welcome img {
+    width: 100%;
+}
+/* SECTION 2 : WHAT WE DO */
+#what-we-do  {
+    text-align: center;
+}
+#what-we-do h1 {
+    font-size: 50px;
+}
+#what-we-do .container {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 400;
+    font-size: 15px;
+}
+.container .item {
+    width: 25%;
+    height: 300px;
+    border: 1px solid white;
+    
+
+}
+.item img {
+    border-radius: 50%;
+    margin: 10px auto;
+    display: block;
+}
+.item p {
+    color: grey;
+    margin: 0px 30px;
+}
+
+/* SECTION 3 : STATISTICS */
+#statistics {
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding-top: 30px;
+    margin-top: 30px;
+}
+#statistics .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0px 200px;
+}
+
+/* SECTION 4 : SERVICES */
+#services {
+    background-color: #f8f9fa;
+    padding: 100px 200px;
+    display: flex;
+}
+/* left */
+#left {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    width: 700px;
+}
+#left h1 {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 10px;
+    text-align: center;
+}
+#left p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 40px;
+}
+
+/* right */
+#right {
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+}
+#services #right .items {
+    text-align: center;
+    margin: 20px 50px;
+    padding: 50px 20px;
+    border: 1px solid rgb(252, 251, 251);
+    box-shadow: 7px 7px 10px 0 rgb(76 110 245 / 10%);
+}
+#services #right .items p {
+    padding: 30px 0px;
+    font-size: 15px;
+}
+/* SECTION 4 : TESTIMONIALS */
+#testimonials {
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    padding-top: 30px;
+    margin-top: 30px;
+}
+#owner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0px 50px;
+}
+#owner .items p {
+    color: white;
+    font-size: 15px;
+    margin: 10px 100px;
+    padding: 10px 50px;
+}
+#owner .items img {
+    border-radius: 50%;
+    margin: 10px auto;
+    display: block;
+}
+#owner .items h1 {
+    color: orange;
+    text-align: right;
+    font-size: 15px;
+    padding-right: 140px;
+    margin-top: 20px;
+}
+/* SECTION 4 : OUR BLOGS */
+#header-our-blogs h1{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 40px;
+}
+#blogs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding:  10px 190px 50px;
+
+}
+#blogs .items {
+    margin: 15px;
+    border: 1px solid #f8f9fa;
+    box-shadow: 7px 7px 10px 0 rgb(76 110 245 / 10%);
+}
+#blogs .items h1 {
+    margin: 15px;
+    font-size: 20px;
+}
+#blogs .items p {
+    margin: 15px;
+}
+#blogs .items h2 {
+    margin: 15px;
+    color: orange;
+    font-size: 15px;
+}
+/* SECTION 5 : MAP */
+#map iframe{
+    width: 100%;
+    height: 450px;
+    border: 0px;
+}
+/* SECTION 6 : CONTACT */
+/* left contact */
+#contact-us h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+#contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px 300px;
+}
+#label h1{
+    color: orange;
+    font-size: 25px;
+    text-align: left;
+    margin: 0px 30px;
+}
+#container {
+    display: flex;
+    flex-direction: row;
+}
+#icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 10px;
+    padding: 40px;
+}
+#detail p {
+    width: 200px;
+    margin: 0px;
+}
+/* right contact */
+#contact-right {
+    background-color: rgb(247, 247, 247);
+    box-shadow: 7px 7px 10px 0 rgb(76 110 245 / 10%);
+    width: 350px;
+}
+#contact-right input {
+    width: 300px;
+    height: 30px;
+    margin: 0px 20px;
+}
+
+/* SECTION 6 : FOOTER */
+#footer-data {
+    width: 100%;
+    background-color: black;
+}
+#footer-detail {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+
+}
