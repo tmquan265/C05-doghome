@@ -8,91 +8,106 @@ body {
 p {
     color: #999;
 }
-/* SECTION 1 :BANNER */
-/* navigation + logo */
+/* SECTION 1: BANNER */
+/* Navigation + Logo */
 #header {
     position: relative;
-    height: 1000px;
+    width: 100%;
+    height: 100vh;
     background-image: url("../img/1.jpg");
     background-size: cover;
     background-position: center;
 }
-#nav label {
-    display: none;
-}
-#nav #menu {
-    display: none;
-}
 #logo {
-    position: absolute;
-    left: 3%;
-    top: 2%;
-    font-weight: bold;
+    margin-top: 3%;
+    padding-left: 5%;
+    float: left;
 }
 #logo a {
+    font-size: 30px;
     text-decoration: none;
     color: white;
+    font-weight: bold;
+}
+input[type=checkbox] {
+    display: none;
+}
+#menu {
+    background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+    float: right;
+    margin-top: 3%;
     font-size: 30px;
+    color: black;
+    font-weight: bold;
+    margin-right: 5%;
+    cursor: pointer;
+    display: none;
 }
 #nav ul{
-    display: flex;
-    justify-content: right;
-    border-left-width: 100px;
-    margin-left: 335px;
-    padding: 15px;
-    margin-top: 0;
+    float: right;
+    margin-right: 3%;
+    margin-top: 2%;
 }
 #nav ul li {
-    margin: 10px;
+    display: inline-block;
     font-weight: 700;
     font-size: 25px;
-    display: flex;
 }
-li a {
+#nav ul li a {
+    display: block;
     text-decoration: none;
     color: white;
     padding: 15px;
 }
-li a:hover {
+#nav ul li a:hover {
     background-color: white;
     color: black;
     border-radius: 8px;
     transition : all 0.5s;
 }
-@media only screen and (max-width: 992px) {
-    input[type="checkbox"] {
-        display: none;
+/* RESPONDSIVE FOR SECTION 1: Navigation + logo */
+    /* FOR DEVICE HAVE BREAKPOINT AT 992PX */
+    @media only screen and (max-width: 992px) {
+        #nav h1 {
+            margin-top: 5%;
+        }
+        #menu {
+            display: block;
+        }
+        #nav ul {
+            position: absolute;
+            height: 80vh;
+            width: 100%;
+            background-color: rgb(158 217 7 / 100%);
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: .5s all;
+            z-index: 2;
+          }
+        #nav ul li {
+            display: block;
+            line-height: 30px;
+            margin-bottom: 5%;
+          }
+        #nav ul li a {
+            font-size: 30px;
+        }
+        #check:checked ~ ul {
+            left: 0;
+            padding-left: 0;
+          }
+    }      
+    /* FOR DEVICE HAVE BREAKPOINT AT 576PX */
+    @media only screen and (max-width: 576px) {
+        #nav>input:checked + ul {
+            top: 4%;
+            left: 50%;
+        }
     }
-    #nav ul{
-        display: none;
-    }
-    #nav label {
-        background-color: white;
-        border-radius: 4px;
-        padding: 15px;
-        display: inline-block;
-        position: absolute;
-        left: 80%;
-        top: 4%;
-        font-size: 25px;
-        font-weight: 500;
-        color: black;
-    }
-    #nav>input:checked + ul{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 10%;
-        left: 74%;
-        margin: 0;
-    }
-    #nav>input:checked +ul li {
-        display: block;
-        text-align: center;
-
-    }
-}
-/* main-header */
+/* Main-header */
 #main-header {
     position: absolute;
     left: 50%;
@@ -101,6 +116,8 @@ li a:hover {
     text-align: center;
     color: white;
     font-size: 20px;
+    width: 100%;
+    z-index: 1;
 }
 #main-header h1{
     font-size: 50px;
@@ -118,7 +135,23 @@ li a:hover {
     border-radius: 5px;
     display: inline-block;
 }
-/* footer */
+/* RESPONDSIVE FOR SECTION 1: Main-header */
+    /* FOR DEVICE HAVE BREAKPOINT AT 992PX */
+    @media only screen and (max-width: 992px) {
+        #main-header h1{
+            font-size: 30px;
+        }
+    }
+    /* FOR DEVICE HAVE BREAKPOINT AT 576PX */
+    @media only screen and (max-width: 576px) {
+        #main-header {
+            font-size: 15px;
+        }
+        #main-header h1{
+            font-size: 30px;
+        }
+    }
+/* Footer */
 #list {
     position: absolute;
     top: 95%;
@@ -127,7 +160,7 @@ li a:hover {
     text-align: center;
 
 }
-/* SECTION 2 : WELCOME */
+/* SECTION 2: WELCOME */
 #welcome {
     padding: 20px 40px;
     font-weight: 400;
@@ -147,13 +180,13 @@ li a:hover {
 #welcome img {
     width: 100%;
 }
-/* SECTION 2 : WHAT WE DO */
+/* SECTION 3: WHAT WE DO */
 #what-we-do  {
     text-align: center;
     padding: 100px;
-    padding-top: 0;
 }
 #what-we-do h1 {
+    margin-top: 0px;
     font-size: 50px;
 }
 #what-we-do .container {
@@ -176,55 +209,105 @@ li a:hover {
 .item p {
     margin: 0px 30px;
 }
-@media only screen and (max-width: 992px) {
-    #what-we-do .container .item {
-        width: 50%;
+/* RESPONDSIVE FOR SECTION 3 */
+    /* FOR DEVICE HAVE BREAKPOINT AT 992PX */
+    @media only screen and (max-width: 992px) {
+        #what-we-do .container .item {
+            width: 50%;
+        }
     }
-}
-@media only screen and (max-width: 576px) {
-    #what-we-do .container .item {
-        width: 100%;
+    /* FOR DEVICE HAVE BREAKPOINT AT 576PX */
+    @media only screen and (max-width: 576px) {
+        #what-we-do .container .item {
+            width: 100%;
+        }
     }
-}
-
-
-/* SECTION 3 : STATISTICS */
+/* SECTION 4: STATISTICS */
 #statistics {
     background-image: url(../img/bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     text-align: center;
-    font-size: 30px;
     color: #fff;
+    font-size: 30px;
     padding-top: 30px;
-    margin-top: 30px;
+}
+#statistics-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0% 10%;
+}
+#statistics-container h1 {
+    margin-bottom: 10%;
 }
 #statistics .container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 0px 200px;
+    margin-bottom: 10%;
 }
 #statistics .container p {
+    font-size: 20px;
     color: #fff;
 }
-
-/* SECTION 4 : SERVICES */
+#statistics .container .items h2 {
+    font-size: 50px;
+    margin: 0%;
+}
+/* RESPONDSIVE FOR SECTION 4 */
+    /* FOR DEVICE HAVE BREAKPOINT AT 992PX */
+    @media only screen and (max-width: 992px) {
+        #statistics .container {
+            flex-wrap: wrap;
+        }
+        #statistics .container .items {
+            width: 50%;
+            margin-bottom: 5%;
+        }
+        #statistics-container .container {
+            margin-bottom: 5%;
+        }
+    }
+    /* FOR DEVICE HAVE BREAKPOINT AT 576px */
+    @media only screen and (max-width: 576px) {
+        #statistics .container {
+            flex-direction: column;
+        }
+        #statistics .container .items {
+            width: 100%;
+        }
+    }
+/* SECTION 5: SERVICES */
+/* Services-frame */
 #services {
     background-color: #f8f9fa;
-    padding: 100px;
-    display: flex;
-    width: 100%;
+    padding: 100px 30px;
 }
-/* left */
+#services-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* RESPONDSIVE FOR SECTION 5: Services-frame */
+     /* FOR DEVICE HAVE BREAKPOINT AT 992PX */
+    @media only screen and (max-width: 992px) {
+        #services {
+            padding: 50px 30px;
+        }
+    } 
+    /* FOR DEVICE HAVE BREAKPOINT AT 576px */
+    @media only screen and (max-width: 576px) {
+        #services-container {
+            flex-direction: column;
+        }
+    }  
+/* Left */
 #left {
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-    width: 33%;
+    float: left;
+    width: 30%;
     margin-right: 40px;
-}
+    }
 #left h1 {
     font-size: 30px;
     font-weight: 700;
@@ -235,17 +318,33 @@ li a:hover {
     font-weight: 300;
     line-height: 40px;
 }
-
-/* right */
-.right {
-    display: flex;
-    justify-content: right;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 40%;
+/* RESPONDSIVE FOR SECTION 5: Left */
+     /* FOR DEVICE HAVE BREAKPOINT AT 992PX */
+     @media only screen and (max-width: 992px) {
+        #left p {
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+    /* FOR DEVICE HAVE BREAKPOINT AT 576px */
+    @media only screen and (max-width: 576px) {
+        #left {
+            width: 100%;
+        }
+        #left h1 {
+            text-align: left;
+        }
+    }
+/* Right */
+#right {
+    float: left;
+    width: 70%;
 }
-#services .right .items {
-    margin: 15px;
+#services #right .items {
+    float: left;
+    width: 46%;
+    height: 50%;
+    margin: 1%;
     padding: 50px;
     text-align: center;
     font-size: 25px;
@@ -254,11 +353,12 @@ li a:hover {
     box-shadow: 7px 7px 10px 0 rgb(76 110 245 / 10%);
     transition : all 0.5s;
 }
-#services .right .items p {
+
+#services #right .items p {
     padding: 30px 0px;
     font-size: 20px;
 }
-#services .right i {
+#services #right i {
     color: #ff9900;
     font-size: 50px;
 }
@@ -271,7 +371,36 @@ li a:hover {
 #services .items:hover p {
     color: #fff;
 }
-/* SECTION 4 : TESTIMONIALS */
+/* RESPONDSIVE FOR SECTION 5: Right */
+     /* FOR DEVICE HAVE BREAKPOINT AT 992PX */
+     @media only screen and (max-width: 992px) {
+        #right {
+            padding: 6% 0;
+        }
+        #services #right .items h1 {
+            font-size: 20px;
+        }
+        #services #right .items {
+            font-size: 15px;
+            width: 40%;
+            padding: 20px;
+            height: 50%;
+        }   
+        #services #right .items p {
+            padding: 0px;
+            font-size: 15px;
+        }
+    }
+    /* FOR DEVICE HAVE BREAKPOINT AT 576px */
+    @media only screen and (max-width: 576px) {
+        #right {
+            width: 100%;
+        }
+        #services #right .items {
+            width: 100%;
+        }
+    }
+/* SECTION 6: TESTIMONIALS */
 #testimonials {
     background-image: url(../img/bg.jpg);
     background-repeat: no-repeat;
@@ -285,14 +414,13 @@ li a:hover {
 #owner {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 0px 50px;
 }
 #owner .items p {
     color: white;
     font-size: 15px;
-    margin: 10px 100px;
-    padding: 10px 50px;
+    padding: 2% 20%;
 }
 #owner .items img {
     border-radius: 50%;
@@ -301,12 +429,28 @@ li a:hover {
 }
 #owner .items h1 {
     color: orange;
-    text-align: right;
+    text-align: center;
     font-size: 15px;
-    padding-right: 140px;
-    margin-top: 20px;
+    display: inline-block;
+    margin-left: 25%;
 }
-/* SECTION 4 : OUR BLOGS */
+/* RESPONDSIVE FOR SECTION 6 */
+     /* FOR DEVICE HAVE BREAKPOINT AT 992PX */
+    @media only screen and (max-width: 992px) {
+        #owner .items {
+            margin-bottom: 7%;
+        }
+    }
+    /* FOR DEVICE HAVE BREAKPOINT AT 576px */
+    @media only screen and (max-width: 576px) {
+        #owner {
+            flex-direction: column;
+        }
+        #owner .items p {
+            padding: 0;
+        }
+    }
+/* SECTION 7: OUR BLOGS */
 #our-blogs {
     padding: 100px;
 }
@@ -320,7 +464,6 @@ li a:hover {
     justify-content: space-around;
 }
 #blogs .items {
-    margin: 15px;
     border: 1px solid #f8f9fa;
     box-shadow: 7px 7px 10px 0 rgb(76 110 245 / 10%);
     width: 31%;
@@ -328,36 +471,52 @@ li a:hover {
 #blogs .items img {
     width: 100%;
 }
-#blogs .items h1 {
-    margin: 15px;
+#blogs .items h2 {
+    margin: 4%;
     font-size: 20px;
+    color: orange;
 }
 #blogs .items p {
-    margin: 15px;
-}
-#blog-article {
-    padding: 15px;
-    width: 100%;
-}
-#blog-article p {
+    margin: 4%;
     font-size: 21px;
     color: #1f1f1f;
 }
-#blog-article h2 {
-    margin: 15px;
-    color: orange;
-    font-size: 15px;    
+#blogs .items h1 {
+    font-size: 25px;
+    margin: 4% 9% 0 4%;
+    
 }
-/* SECTION 5 : MAP */
+/* RESPONDSIVE FOR SECTION 6 */
+    /* FOR DEVICE HAVE BREAKPOINT AT 992PX */
+    @media only screen and (max-width: 992px) {
+         #our-blogs {
+             padding: 40px 20px;
+         }
+        #blogs .items h1 {
+            font-size: 21px;
+     }
+    }
+    /* FOR DEVICE HAVE BREAKPOINT AT 576px */
+    @media only screen and (max-width: 576px) {
+        #blogs {
+            flex-direction: column;
+            margin: 0px;
+        }
+        #blogs .items {
+            width: 100%;
+            margin: 4% 0;
+        }
+    }
+/* SECTION 8 : MAP */
 #map iframe{
     width: 100%;
     height: 450px;
     border: 0px;
 }
-/* SECTION 6 : CONTACT */
+/* SECTION 9 : CONTACT */
 #contact-us {
     height: 100%;
-    padding: 40px 120px;
+    padding: 40px 15%;
 }
 #contact-us h1{
     text-align: center;
@@ -366,13 +525,28 @@ li a:hover {
 }
 #contact {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    padding: 0px 80px;
+    flex-direction: row ;
+    justify-content: center;
 }
+/* RESPONDSIVE FOR SECTION 6 */
+    /* FOR DEVICE HAVE BREAKPOINT AT 992PX */
+    @media only screen and (max-width: 992px) {
+        #contact-us {
+            padding: 4% 5%;
+        }
+    }
+    /* FOR DEVICE HAVE BREAKPOINT AT 576px */
+    @media only screen and (max-width: 576px) {
+        #contact-us {
+            padding: 40px 50px;
+        }
+        #contact {
+            flex-direction: column;
+        }
+    }
 /* left contact */
 #contact-left {
-    width: 40%;
+    width: 50%;
 }
 #label h1{
     color: orange;
@@ -381,21 +555,28 @@ li a:hover {
     margin: 0px 0px 30px 0px;
 }
 .icon {
-    width: 20%;
+    margin-right: 10%;
     font-size: 30px;
 }
-.container {
+.contact-container {
     display: flex;
     margin-bottom: 20px;
 }
-.container .items h2 {
+.contact-items h2 {
     font-size: 20px;
     margin: 0px 0px 10px 0px;
 }
-.container .items p {
+.contact-items p {
     margin: 0px 0px 2px 0px;
-
+    padding-right: 15%;
 }
+/* RESPONDSIVE FOR SECTION 6 */
+    /* FOR DEVICE HAVE BREAKPOINT AT 576px */
+    @media only screen and (max-width: 576px) {
+        #contact-left {
+            width: 100%;
+        }
+    }
 /* right contact */
 #contact-right {
     background-color: rgb(247, 247, 247);
@@ -435,30 +616,68 @@ li a:hover {
     font-size: 16px;
     cursor: pointer;
 }
-
-/* SECTION 6 : FOOTER */
-#footer-data {
+/* RESPONDSIVE FOR SECTION 6 */
+    /* FOR DEVICE HAVE BREAKPOINT AT 576px */
+    @media only screen and (max-width: 576px) {
+        #contact-right {
+            width: 100%;
+        }
+    }
+/* SECTION 10 : FOOTER */
+#footer {
     width: 100%;
     background-color: #17181b;
-    padding: 50px 100px;
+    padding: 3%;
 }
-#footer-detail {
+#footer-container {
     color: white;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* RESPONDSIVE FOR SECTION 6 */
+    /* FOR DEVICE HAVE BREAKPOINT AT 576px */
+    @media only screen and (max-width: 576px) {
+        #footer-container {
+            flex-direction: column;
+        }
+    }
+/* Left */
+#footer-left {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
-    height: 100%;
+    flex-wrap: wrap ;
 }
-#footer-detail .footer1 {
-    width: 23%;
+.footer1 {
+    width: 25%;
 }
-#footer-detail .footer1 p{
+.footer1 p{
     font-size: 16px;
 }
-#footer-detail .footer1 h1{
+.footer1 h1{
     font-size: 22px;
 }
-#footer-detail .footer1 h2{
+.footer1 h2{
     font-size: 16px;
+}
+/* RESPONDSIVE FOR SECTION 6 */
+    /* FOR DEVICE HAVE BREAKPOINT AT 576px */
+    @media only screen and (max-width: 576px) {
+        #footer-left {
+            justify-content: space-between;
+            width: 100%;
+        }
+        .footer1 {
+            width: 45%;
+        }
+    }
+/* Right */
+#footer-right {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
 }
 #submit {
     padding: 15px 20px;
@@ -468,12 +687,12 @@ li a:hover {
     border: none;    
 }
 #mailbox {
-    padding: 13px;
+    padding: 15px;
     font-size: 14px;
 }
 #social-network ul{
     list-style: none;
-    margin: 10px;
+    margin: 0;
     padding-left: 0;
 }
 #social-network ul li{
@@ -503,4 +722,11 @@ li a:hover {
 }
 #google {
     background-color: #f44336;
-}
+} 
+/* RESPONDSIVE FOR SECTION 6 */
+    /* FOR DEVICE HAVE BREAKPOINT AT 576px */
+    @media only screen and (max-width: 576px) {
+        #footer-right {
+            width: 100%;
+        }
+    }
