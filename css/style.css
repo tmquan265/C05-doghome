@@ -38,7 +38,7 @@ input[type=checkbox] {
     padding: 15px;
     float: right;
     margin-top: 3%;
-    font-size: 30px;
+    font-size: 25px;
     color: black;
     font-weight: bold;
     margin-right: 5%;
@@ -183,7 +183,7 @@ input[type=checkbox] {
 /* SECTION 3: WHAT WE DO */
 #what-we-do  {
     text-align: center;
-    padding: 100px;
+    padding: 100px 0px;
 }
 #what-we-do h1 {
     margin-top: 0px;
@@ -382,7 +382,7 @@ input[type=checkbox] {
         }
         #services #right .items {
             font-size: 15px;
-            width: 40%;
+            width: 48%;
             padding: 20px;
             height: 50%;
         }   
@@ -625,6 +625,7 @@ input[type=checkbox] {
     }
 /* SECTION 10 : FOOTER */
 #footer {
+    position: relative;
     width: 100%;
     background-color: #17181b;
     padding: 3%;
@@ -651,10 +652,13 @@ input[type=checkbox] {
     flex-wrap: wrap ;
 }
 .footer1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
     width: 25%;
 }
 .footer1 p{
     font-size: 16px;
+    overflow: overlay;
 }
 .footer1 h1{
     font-size: 22px;
@@ -679,14 +683,19 @@ input[type=checkbox] {
     flex-direction: column;
     width: 35%;
 }
+#form {
+    width: 70%;
+}
 #submit {
-    padding: 15px 20px;
+    position: absolute;
+    padding: 17px 20px;
     color: #fff;
     margin-left: -5px;
     background-color: #c57600;
     border: none;    
 }
 #mailbox {
+    width: 70%;
     padding: 15px;
     font-size: 14px;
 }
