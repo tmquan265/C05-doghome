@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DogHome-v1</title>
+    <title>DogHome</title>
+    <link rel="icon" href="img/image0.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
@@ -23,7 +24,15 @@
                         <li><a class="active" href="#">Home</a></li>
                         <li><a class="active" href="#">About Us</a></li>
                         <li><a class="active" href="#">Gallery</a></li>
-                        <li><a class="active" href="#">Dropdown</a></li>
+                        <li class="dropdown">
+                    <a id="drop-btn" href="#">Dropdown <span class="fa fa-angle-down"></span></a>
+                    <input type="checkbox" id="check2"/>
+                    <label for="check2">Dropdown <span class="fa fa-angle-down"></span></label>
+                    <ul>
+                        <li><a href="#our-blogs">Blog</a></li>
+                        <li><a href="#what-we-do">What we do</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
                         <li><a class="active" href="#">Contact Us</a></li>
                     </ul>
         </nav>

@@ -67,6 +67,23 @@
         border-radius: 8px;
         transition : all 0.5s;
     }
+    #nav .dropdown  ul {
+        display: none;
+    }
+    #nav .dropdown:hover ul {
+        display: block;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    #nav .dropdown ul li {
+        display: block;
+        list-style-type: none;
+    }
+    #nav .dropdown label {
+        display: none;
+    }
+
+
     /* RESPONDSIVE FOR SECTION 1: Navigation + logo */
         /* FOR DEVICE HAVE BREAKPOINT AT 992PX */
         @media only screen and (max-width: 992px) {
@@ -96,6 +113,9 @@
             #check:checked ~ ul {
                 top: 10%;
                 padding-left: 0;
+            }
+            #drop-btn:checked ul li {
+                display: block;
             }
         }      
         /* FOR DEVICE HAVE BREAKPOINT AT 576PX */
